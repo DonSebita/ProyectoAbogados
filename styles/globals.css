@@ -85,7 +85,6 @@ a {
 
 .navbar-links {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 
@@ -99,6 +98,7 @@ a {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  display: none; /* Ocultar el botón de alternancia en pantalla completa */
 }
 
 .navbar-toggle-icon {
@@ -142,7 +142,14 @@ a {
   .navbar-links.active {
     display: flex;
   }
+
+  .navbar-toggle {
+    display: block; /* Mostrar el botón de alternancia en pantalla móvil */
+  }
 }
+  .navbar-toggle:focus {
+    outline: none; /* Quitar el contorno al hacer clic en el botón */
+  }
 
 /*Footer*/
 

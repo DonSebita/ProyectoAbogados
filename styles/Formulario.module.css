@@ -1,0 +1,61 @@
+
+.formregister {
+    width: 400px; /* Ajusta el ancho del formulario */
+    background-color: #ffffff;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px; /* Ajusta la posición vertical del formulario */
+    margin-bottom: 50px; /* Ajusta la posición vertical del formulario */
+    border-radius: 4px;
+    font-family: 'Arial', sans-serif;
+    color: rgb(43, 40, 40);
+    box-shadow: 7px 13px 37px #302e2e;
+  }
+
+.formregister h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #353636;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.formregister p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.formregister a {
+  color: white;
+  text-decoration: none;
+}
+
+.formregister a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.formregister .botons {
+  width: 100%;
+  background-color: #a553d4;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+
+

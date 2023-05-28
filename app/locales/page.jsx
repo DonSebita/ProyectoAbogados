@@ -1,5 +1,17 @@
 export default function Locales() {
 	return (	
-		<h2>soy locales</h2>
+		<div className="contenedorLocales">
+			<div className = "pitru">
+				
+			</div>
+
+			<div className = "tolten">
+				
+			</div>
+
+			<div className = "loncoche">
+				
+			</div>
+		</div>
 	)
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/Formulario.module.css'
+import styles from '../../../styles/Formulario.module.css'
 
 export default function Index() {
 	return (

@@ -6,10 +6,10 @@ const links = [{
     ruta: '/'
   },{
     label : 'Locales',
-    ruta: '/locales'
+    ruta: '/principal/locales'
   },{
     label : 'Contactanos',
-    ruta: '/contacto'
+    ruta: '/principal/contacto'
 }]
 const Navbar = () => {
   return(

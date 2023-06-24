@@ -1,27 +1,33 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import DBmodel from '../models/DBmodel';
 
 const LoginForm = () => {
   const initialValues = {
-    username: '',
-    password: ''
+    rut: '',
+    password: '',
   };
 
   const validationSchema = Yup.object({
-    username: Yup.string().required('El nombre de usuario es obligatorio'),
-    password: Yup.string().required('La contraseña es obligatoria')
+    rut: Yup.string().required('El Rut es obligatorio'),
+    password: Yup.string().required('La contraseña es obligatoria'),
   });
 
-  const handleSubmit = (values, { setSubmitting }) => {
-    // Aquí deberías realizar la validación de los datos ingresados en tu base de datos
-    // y luego redirigir a la página externa si los datos son válidos
+  const handleSubmit = async (values, { setSubmitting }) => {
+    try {
+      const { rut, clave } = values;
 
-    // Simulamos la validación de datos
-    const isValid = true; // Cambia esto según tu lógica de validación
+      const dbmodel = await DBmodel.findOne({ rut, clave });
 
-    if (isValid) {
-      window.location.href = '/paginaAbogados'; // Cambia esto con tu ruta externa
+      if (dbmodel) {
+        // Redirigir a la ruta dentro de la misma página
+        window.location.href = '/'; // Cambia esto con la ruta deseada
+      } else {
+        throw new Error('Usuario no encontrado');
+      }
+    } catch (error) {
+      console.error(error);
     }
 
     setSubmitting(false);
@@ -31,9 +37,9 @@ const LoginForm = () => {
     <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
       <Form>
         <div>
-          <label htmlFor="username">Nombre de Usuario:</label>
-          <Field type="text" id="username" name="username" />
-          <ErrorMessage name="username" component="div" />
+          <label htmlFor="rut">Rut:</label>
+          <Field type="text" id="rut" name="rut" />
+          <ErrorMessage name="rut" component="div" />
         </div>
 
         <div>

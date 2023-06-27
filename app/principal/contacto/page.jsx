@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../../../styles/Formulario.module.css'
-
+import conexionBD from '../../../lib/mongodb'
 export default function Index() {
 	return (
 		<div className={styles.cuadroformulario}>
@@ -15,4 +15,11 @@ export default function Index() {
     		</section>
     	</div>  
 	)
+}
+export async function getServerSideProps(){
+  try{
+    await conexionBD()
+  }catch(error){
+    console.log(error)
+  }
 }

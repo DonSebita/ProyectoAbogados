@@ -1,7 +1,7 @@
 
 .formregister {
     width: 400px; /* Ajusta el ancho del formulario */
-    background-color: #ffffff;
+    background-color: #A5C9CA;
     padding: 30px;
     margin: auto;
     margin-top: 50px; /* Ajusta la posición vertical del formulario */
@@ -48,7 +48,7 @@
 
 .formregister .botons {
   width: 100%;
-  background-color: #a553d4;
+  background-color: #2C3333;
   border: none;
   padding: 12px;
   color: white;
@@ -57,5 +57,41 @@
   border-radius: 4px;
 }
 
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
 
+.local {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1px; /* Ajusta el valor según tu preferencia */
+}
 
+.local:last-child {
+  margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
+.localContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #000000; /* Borde sólido */
+  background-color: #395B64;
+  border-radius: 8px; /* Borde redondeado */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra */
+  padding: 10px; /* Espaciado interno */
+}
+.btnUbicacion {
+  background-color: #2C3333;
+  color: white;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 15px;
+}

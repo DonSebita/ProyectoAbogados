@@ -1,4 +1,5 @@
-import mongoose from 'mongoose'
+'use strict'
+const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
   rut: {

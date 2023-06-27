@@ -1,0 +1,99 @@
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #A5C9CA;
+  padding: 10px 20px;
+  color: #27374D;
+  
+}
+
+.navbarLogo a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbarLinks {
+  color: #A5C9CA;
+  display: flex;
+  align-items: center;
+  
+}
+
+.navbarLinks a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #27374D;
+  background-color: #395B64;
+  padding: 10px;
+  border: 2px solid #395B64;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  
+}
+
+
+
+.navbar-toggle {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: none; /* Ocultar el botón de alternancia en pantalla completa */
+}
+
+.navbar-toggle-icon {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #333;
+  margin-bottom: 4px;
+}
+
+.navbar-toggle-icon:before,
+.navbar-toggle-icon:after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #333;
+}
+
+.navbar-toggle-icon:before {
+  transform: translateY(-6px);
+}
+
+.navbar-toggle-icon:after {
+  transform: translateY(4px);
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #f2f2f2;
+    padding: 10px;
+    z-index: 999;
+  }
+
+  .navbarLinks.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block; /* Mostrar el botón de alternancia en pantalla móvil */
+  }
+}
+.navbar-toggle:focus {
+    outline: none; /* Quitar el contorno al hacer clic en el botón */
+  }
